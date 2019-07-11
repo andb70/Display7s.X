@@ -36,7 +36,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "config.h"
-#include "timers.h"
+#include "../timers1.X/timers.h"
 #include "display7s.h"
 
 // HEARTBEAT led: toggle every seconds
@@ -61,8 +61,6 @@ int main() {
     initLeds();
     // initialize port pins to be used with leds
     initGlobals();
-
-    timerFlags.w = 0x00;
 
     // if using reset bit
 #ifdef SHIFT_SRCLR_EN
